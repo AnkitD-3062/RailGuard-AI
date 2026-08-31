@@ -1,0 +1,14 @@
+# Local Python environment and build cache
+.venv/
+.gcm/
+__pycache__/
+*.py[cod]
+
+# Uploaded footage is temporary and may contain sensitive video data
+data/uploads/
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

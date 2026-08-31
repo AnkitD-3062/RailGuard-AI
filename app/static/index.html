@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RailGuard AI</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">INDIAN RAILWAY SAFETY PROTOTYPE</p>
+      <h1>RailGuard <span>AI</span></h1>
+      <p class="subtitle">Crowd-density and track-intrusion early warning for railway stations.</p>
+    </header>
+
+    <section class="upload-card">
+      <h2>Analyse station footage</h2>
+      <p>Upload a recorded MP4, AVI, MOV, or WebM video. The prototype samples frames and estimates pedestrian density.</p>
+      <form id="analysis-form">
+        <label class="file-picker" for="video-file">Choose video<input id="video-file" name="file" type="file" accept="video/*" required></label>
+        <span id="file-name">No video selected</span>
+        <button id="submit" type="submit">Run safety analysis</button>
+      </form>
+      <p id="progress" role="status"></p>
+    </section>
+
+    <section id="result" class="result hidden" aria-live="polite">
+      <div id="risk-badge" class="risk-badge">—</div>
+      <div>
+        <p class="eyebrow">LATEST ASSESSMENT</p>
+        <h2 id="message">Waiting for analysis</h2>
+      </div>
+      <div class="metrics">
+        <article><strong id="risk-score">—</strong><span>Risk score / 100</span></article>
+        <article><strong id="peak-people">—</strong><span>Peak people detected</span></article>
+        <article><strong id="average-people">—</strong><span>Average per sampled frame</span></article>
+        <article><strong id="intrusions">—</strong><span>Track-zone frames</span></article>
+      </div>
+      <p class="disclaimer">Prototype only. Detection results require trained staff verification; production use needs camera calibration and certified safety processes.</p>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
