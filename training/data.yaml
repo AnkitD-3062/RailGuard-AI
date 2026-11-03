@@ -1,0 +1,7 @@
+# Generated CrowdHuman training dataset. Paths are relative to this file.
+path: datasets/railcrowd
+train: images/train
+val: images/val
+
+names:
+  0: person

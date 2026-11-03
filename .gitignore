@@ -1,18 +1,21 @@
-# Local Python environment and build cache
+# Local Python environments and build/cache files
 .venv/
+.railguard-check-venv/
 .gcm/
 __pycache__/
 *.py[cod]
+.pip-temp/
 
-# Uploaded footage is temporary and may contain sensitive video data
+# Uploaded footage and downloaded datasets may be private or licensed
 data/uploads/
+datasets/
+runs/
 
-# Editor and operating-system files
+# Local server logs and editor/OS files
+*.log
+*.out
+*.err
 .vscode/
 .idea/
 .DS_Store
 Thumbs.db
-
-# Local server logs
-*.out
-*.err
